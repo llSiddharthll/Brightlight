@@ -26,7 +26,7 @@
 
 .blogs {
   width: 32%;
-  position: relative; 
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -43,7 +43,9 @@
   margin-bottom: 10px;
 }
 
-.blogs h4, h6, h5 {
+.blogs h4,
+.blogs h6,
+.blogs h5 {
   margin: 10px 0px;
   color: #132f46;
 }
@@ -65,7 +67,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 @media (max-width: 1460px) {
   .recentBlogMainSection {
     width: 95%;
@@ -82,7 +83,6 @@
 }
 
 @media (max-width: 1060px) {
-
   .blogs {
     width: 95%;
     align-items: center;
@@ -109,7 +109,6 @@
     height: 200px;
   }
 }
-
 
 @media (max-width: 485px) {
   .blogs img {

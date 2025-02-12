@@ -276,7 +276,7 @@
   margin-bottom: 5px;
   /* color: #333; */
 }
-.countryTable th ,tr{
+.countryTable th ,.countryTable tr{
   text-align: center;
 }
 .countryTable {

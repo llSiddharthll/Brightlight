@@ -147,7 +147,7 @@
     margin-bottom: 50px;
   }
   
- .section h1, h2 {
+ .section h1, .section h2 {
     color: #00273f;
   }
 
