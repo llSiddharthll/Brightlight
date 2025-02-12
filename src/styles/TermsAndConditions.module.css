@@ -23,21 +23,21 @@
     margin-bottom: 10px;
   }
   
-  ul {
+  .ul {
     margin-left: 20px;
     list-style-type: disc;
   }
   
-  ul li {
+  .ul li {
     margin-bottom: 10px;
   }
   
-  a {
+  .a {
     color: #132f46;
     text-decoration: none;
   }
   
-  a:hover {
+  .a:hover {
     text-decoration: underline;
   }
   

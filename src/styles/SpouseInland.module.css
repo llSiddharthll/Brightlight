@@ -165,8 +165,8 @@
 }
 
 .container p,
-ul,
-ol {
+.container ul,
+.container ol {
   font-size: 1rem;
   line-height: 1.6;
   margin: 10px 0;

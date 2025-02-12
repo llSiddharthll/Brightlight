@@ -1,4 +1,4 @@
-import { useParams, userouter.replace } from "react-router-dom";
+
 import styles from "../styles/BlogsDetails.module.css";
 import { useEffect, useState } from "react";
 import Navbar1 from "../components/Navbar1";
@@ -9,10 +9,12 @@ import searchIcon from "../assets/search-gray.png";
 import ogImage from "../assets/ogImage.png";
 import Head from "next/head";
 import Lp from "../assets/blogDetailsPic.jpg";
+import { useRouter } from "next/router";
 
 let BlogDetails = () => {
-  let { id } = useParams();
   let router = useRouter()
+  let { id } = router.query;
+  
   let [blog, setBlog] = useState([]);
   let [loveneetData, setLoveneetData] = useState([]);
   let [recentBlogs, setRecentBlogs] = useState([]);

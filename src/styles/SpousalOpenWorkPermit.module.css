@@ -350,7 +350,7 @@ margin-top: 20px;
   .heading {
     font-size: 26px;
   }
-  .eligibilityChart th ,td {
+  .eligibilityChart th ,.eligibilityChart td {
 font-size: 12px;
 }
 }
