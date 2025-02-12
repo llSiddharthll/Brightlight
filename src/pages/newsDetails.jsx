@@ -1,4 +1,4 @@
-import { useParams, userouter.replace } from "react-router-dom";
+import { useRouter } from "next/router"
 import styles from "../styles/NewsDetails.module.css";
 import { useEffect, useState } from "react";
 import Navbar1 from "../components/Navbar1";
@@ -8,8 +8,9 @@ import ogImage from "../assets/ogImage.png";
 import Head from "next/head";
 
 let NewsDetails = () => {
-  let { id } = useParams();
+
   let router = useRouter()
+  let { id } = router.query
   let [blog, setBlog] = useState({});
   let [recentBlogs, setRecentBlogs] = useState([]);
   let [searchQuery, setSearchQuery] = useState("");
@@ -34,10 +35,10 @@ let NewsDetails = () => {
                 .toLowerCase()
                 .includes(idValueArray.toLowerCase());
             });
-            if(filteredData){
+            if (filteredData) {
               setBlog(filteredData[0]);
             }
-            else{
+            else {
               setBlog(data[0]);
             }
           }
@@ -144,10 +145,10 @@ let NewsDetails = () => {
                   href={
                     !item.custom_url
                       ? `/news/${item.news_heading
-                          .trim()
-                          .toLowerCase()
-                          .replace(/[^\w\s]/g, "")
-                          .replace(/\s+/g, "-")}`
+                        .trim()
+                        .toLowerCase()
+                        .replace(/[^\w\s]/g, "")
+                        .replace(/\s+/g, "-")}`
                       : `/news${item.custom_url}`
                   }
                   key={item._id}
@@ -202,10 +203,10 @@ let NewsDetails = () => {
                 href={
                   !item.custom_url
                     ? `/news/${item.news_heading
-                        .trim()
-                        .toLowerCase()
-                        .replace(/[^\w\s]/g, "")
-                        .replace(/\s+/g, "-")}`
+                      .trim()
+                      .toLowerCase()
+                      .replace(/[^\w\s]/g, "")
+                      .replace(/\s+/g, "-")}`
                     : `/news${item.custom_url}`
                 }
                 key={item._id}
