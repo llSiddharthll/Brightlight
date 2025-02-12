@@ -173,7 +173,7 @@
     border-collapse: collapse;
   }
   
-  .container table, th, td {
+  .container table,.container th,.container td {
     border: 1px solid #00273f;
   }
   

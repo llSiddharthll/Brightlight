@@ -257,13 +257,13 @@
 }
 
 .section table,
-th,
-td {
+.section th,
+.section td {
   border: 1px solid #00273f;
 }
 
 .section th,
-td {
+.section td {
   padding: 10px;
   text-align: left;
 }
