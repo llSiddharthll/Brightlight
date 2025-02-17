@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "../styles/FAQ.module.css";
-import { ReactComponent as RightArrow } from "../assets/right-arrow-blue.svg";
+import RightArrow from "../assets/right-arrow-blue.svg";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 let FAQ = () => {
   let [activeIndex, setActiveIndex] = useState(0);

@@ -88,7 +88,7 @@
 .radioGroup3 {
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content:flex-start;
   margin-bottom: 20px;
 }
 
