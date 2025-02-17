@@ -136,7 +136,7 @@ let Immigration = () => {
                   onClick={() => handleCardClick(tool.tool_link)}
                   style={{ cursor: "pointer" }}
                 >
-                  <img
+                     <Image height={50} width={100}
                     src={
                       hoveredIndex === index
                         ? tool.white_stroke_img

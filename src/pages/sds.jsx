@@ -58,13 +58,15 @@ const Sds = () => {
 
   const sectionsRef = useRef([]);
 
-  const handleScroll = () => {
+const handleScroll = () => {
     sectionsRef.current.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        section.classList.add(styles.visible);
-      } else {
-        section.classList.remove(styles.visible);
+      if (section) { // ✅ Check if section exists
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          section.classList.add(styles.visible);
+        } else {
+          section.classList.remove(styles.visible);
+        }
       }
     });
   };

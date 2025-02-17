@@ -168,7 +168,7 @@ let Achievements = () => {
             onChange={handleInputChange}
             disabled={!editMode}
           />
-          <img
+             <Image height={50} width={100}
             className={styles.existingImageSmall}
             src={sectionDataSingle[`achievement${num}SVG`]}
           />
@@ -184,14 +184,14 @@ let Achievements = () => {
       <div className={styles.editIcons}>
         {editMode ? (
           <>
-            <img
+               <Image height={50} width={100}
               src={update}
               className={styles.updateIcon}
               onClick={handleUpdateClick}
             />
           </>
         ) : (
-          <img
+             <Image height={50} width={100}
             src={editIcon}
             className={styles.editIcon}
             onClick={handleEditClick}

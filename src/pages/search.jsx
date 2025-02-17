@@ -261,7 +261,7 @@ const Search = () => {
                         .replace(/[^\w\s]/g, "")
                         .replace(/\s+/g, "-")}`}
                     >
-                      {item.image && <img src={item.image} alt="Blog" />}
+                      {item.image &&    <Image height={50} width={100} src={item.image} alt="Blog" />}
                       {item.blog_heading && <h3>{item.blog_heading}</h3>}
                       {item.blog_content && (
                         <p>{truncateText(item.blog_content, 100)}</p>
@@ -288,7 +288,7 @@ const Search = () => {
                         .replace(/[^\w\s]/g, "")
                         .replace(/\s+/g, "-")}`}
                     >
-                      {item.image && <img src={item.image} alt="News" />}
+                      {item.image &&    <Image height={50} width={100} src={item.image} alt="News" />}
                       {item.news_heading && <h3>{item.news_heading}</h3>}
                       {item.news_content && (
                         <p>{truncateText(item.news_content, 100)}</p>

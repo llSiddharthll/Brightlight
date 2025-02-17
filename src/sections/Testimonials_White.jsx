@@ -120,13 +120,13 @@
 //       <div className={styles.testimonialsContentSection}>
 //         <h1>{videosData?.heading}</h1>
 //         <div className={styles.googleImageSection}>
-//           <img src={google} alt="Google Ratings" />
+//              <Image height={50} width={100}      src={google} alt="Google Ratings" />
 //           <p>{videosData?.googleRatings}/5</p>
 //         </div>
 
 //         <div className={`${styles.clientTestimonialsSection} ${isAnimating ? styles.animating : ""}`}>
 //           <div className={styles.clientImageSection}>
-//             <img src={reviewData[currentReview]?.image} alt={reviewData[currentReview]?.person_name} />
+//                <Image height={50} width={100}       src={reviewData[currentReview]?.image} alt={reviewData[currentReview]?.person_name} />
 //           </div>
 //           <div className={styles.reviewDetails}>
 //             <h3>{reviewData[currentReview]?.review}</h3>
@@ -207,7 +207,7 @@ import ReviewStar  from "../assets/review_star_blue.svg";
 import Arrow  from "../assets/right-arrow-blue.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -310,7 +310,8 @@ const Testimonials_White = () => {
       <div className={styles.testimonialsContentSection}>
         <h1>{data?.heading}</h1>
         <div className={styles.googleImageSection}>
-          <img src={google}  alt="Google" title="Google" />
+             <Image height={50} width={100}    // Arbitrary number, Next.js auto-adjusts it
+     src={google}  alt="Google" title="Google" />
           <p>{data?.googleRatings}/5</p>
         </div>
         <div className={styles.clientReviewsOverflowSection}>
@@ -320,7 +321,8 @@ const Testimonials_White = () => {
             }`}
           >
             <div className={styles.clientImageSection}>
-              <img
+                 <Image height={50} width={100}    // Arbitrary number, Next.js auto-adjusts it
+    
                 src={reviewData[currentReview]?.image}
                 alt={reviewData[currentReview]?.person_name}
               />

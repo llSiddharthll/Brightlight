@@ -4,6 +4,7 @@ import brightBlogs from "../assets/brightblogs.webp";
 import { useEffect, useState } from "react";
 import Prevarrow  from "../assets/right-arrow-blue.svg";
 import  Nextarrow  from "../assets/right-arrow-blue.svg";
+import Image from "next/image";
 
 let NextArrow = () => {
   return (
@@ -77,7 +78,7 @@ let Blogs = () => {
     <div className={styles.blogs}>
       <div className={styles.blogsParent}>
         <div className={styles.blogsTopSection}>
-          <img src={brightBlogs} alt="Bright Blogs" />
+             <Image height={50} width={100}       src={brightBlogs} alt="Bright Blogs" />
           <div className={styles.blogsHeading}>
             <h1>{data?.heading}</h1>
             <p>{data?.description}</p>
@@ -101,7 +102,7 @@ let Blogs = () => {
                     .replace(/[^\w\s]/g, "")
                     .replace(/\s+/g, "-")}` : item.custom_url}
                 >
-                  <img src={item.image} alt={item.blog_heading} />
+                     <Image height={50} width={100}       src={item.image} alt={item.blog_heading} />
                   <h2>{item.blog_heading}</h2>
                   <h6>
                     <b>{item.date && item.date.trim().split("T")[0]}</b>

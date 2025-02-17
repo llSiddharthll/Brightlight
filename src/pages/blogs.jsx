@@ -187,7 +187,7 @@ let Blogs = () => {
       </Head>
       <Navbar1 showBlue={true} />
       <div className={styles.blogsTopSection}>
-        <img src={BrightBlogs} />
+           <Image height={50} width={100} src={BrightBlogs} />
         <h3>
           We're your go-to spot for easy-to-digest blogs about Canadian
           immigration. Think of us as your helpful guide, breaking down the ins
@@ -257,7 +257,7 @@ let Blogs = () => {
             </a>
           </div>
           <div>
-            <img src={firstBlog.image} />
+               <Image height={50} width={100} src={firstBlog.image} />
           </div>
         </div>
       ) : null}
@@ -287,7 +287,7 @@ let Blogs = () => {
                     .replace(/[^\w\s]/g, "")
                     .replace(/\s+/g, "-")}` : item.custom_url}
                 >
-                  {item.image && <img src={item.image} />}
+                  {item.image &&    <Image height={50} width={100} src={item.image} />}
 
                   <div>
                     {item.tag_1 && <h4>{item?.tag_1}</h4>}
@@ -306,9 +306,9 @@ let Blogs = () => {
         )}
         <div className={styles.rightSection}>
           <div className={styles.subscribeSection}>
-            <img className={styles.plane} src={paperPlane} />
+               <Image height={50} width={100} className={styles.plane} src={paperPlane} />
             <h3>Get the latest News Delivered to your mail!</h3>
-            <img src={subscribe} className={styles.subscribe} />
+               <Image height={50} width={100} src={subscribe} className={styles.subscribe} />
           </div>
           <div className={styles.quickLinksSection}>
             <h3>Quick Links</h3>

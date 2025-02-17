@@ -233,7 +233,7 @@ const AllImmigrationToolsCard = () => {
             <div key={blog._id} className={styles.blogItem}>
               <div className={styles.blogContent}>
                 <h4>{blog.tool_name}</h4>
-                <img
+                   <Image height={50} width={100}
                   src={blog.blue_stroke_img}
                   alt="Immigration Tool"
                   className={styles.blogImage2}
@@ -241,13 +241,13 @@ const AllImmigrationToolsCard = () => {
                 <div className={styles.singleBlogOptions}>
                   {editBlogId === blog._id ? (
                     <>
-                      <img
+                         <Image height={50} width={100}
                         src={update}
                         className={styles.updateIcon}
                         onClick={handleUpdateClick}
                         alt="Update"
                       />
-                      <img
+                         <Image height={50} width={100}
                         src={editIcon}
                         className={styles.editIcon}
                         onClick={() => setEditBlogId(null)}
@@ -256,13 +256,13 @@ const AllImmigrationToolsCard = () => {
                     </>
                   ) : (
                     <>
-                      <img
+                         <Image height={50} width={100}
                         src={editIcon}
                         className={styles.editIcon}
                         onClick={() => handleEditClick(blog)}
                         alt="Edit"
                       />
-                      <img
+                         <Image height={50} width={100}
                         src={deleteIcon}
                         className={styles.deleteIcon}
                         onClick={() => {
@@ -509,7 +509,7 @@ const AllImmigrationToolsCard = () => {
                     onChange={handleInputChange}
                   />
                   {newBlogData.blue_stroke_img && (
-                    <img
+                       <Image height={50} width={100}
                       className={styles.existingImageSmall2}
                       src={newBlogData.blue_stroke_img}
                       alt="Preview"
@@ -517,7 +517,7 @@ const AllImmigrationToolsCard = () => {
                   )}
 
                   {newBlogData.white_stroke_img && (
-                    <img
+                       <Image height={50} width={100}
                       className={`${styles.existingImageSmall2} ${styles.blueImage}`}
                       src={newBlogData.white_stroke_img}
                       alt="Preview"

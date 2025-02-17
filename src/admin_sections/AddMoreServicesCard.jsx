@@ -313,7 +313,7 @@ let AddMoreServicesCard = () => {
       />
 
       {sectionDataSingle.blue_stroke_img && (
-        <img
+           <Image height={50} width={100}
           className={styles.existingImageSmall2}
           src={sectionDataSingle.blue_stroke_img}
           alt="Preview"
@@ -321,7 +321,7 @@ let AddMoreServicesCard = () => {
       )}
 
       {sectionDataSingle.white_stroke_img && (
-        <img
+           <Image height={50} width={100}
           className={`${styles.existingImageSmall2} ${styles.blueImage}`}
           src={sectionDataSingle.white_stroke_img}
           alt="Preview"
@@ -330,14 +330,14 @@ let AddMoreServicesCard = () => {
 
       <div className={styles.editIcons}>
         {editMode ? (
-          <img
+             <Image height={50} width={100}
             src={update}
             className={styles.updateIcon}
             onClick={handleAddClick}
             alt="Add"
           />
         ) : (
-          <img
+             <Image height={50} width={100}
             src={editIcon}
             className={styles.editIcon}
             onClick={handleEditClick}

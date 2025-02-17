@@ -5,12 +5,12 @@ import Address from "../assets/address.webp";
 import FooterLogo from "../assets/brightlight-main-logo.webp";
 import FooterLogo2 from "../assets/cicc.png";
 import UpperFooterImage from "../assets/footer-image.webp";
-
-import { ReactComponent as TikTokIcon } from "../assets/tiktok2.svg";
-import { ReactComponent as LinkedInIcon } from "../assets/linkedin2.svg";
-import { ReactComponent as InstagramIcon } from "../assets/instagram2.svg";
-import { ReactComponent as FacebookIcon } from "../assets/facebook2.svg";
-import { ReactComponent as YouTubeIcon } from "../assets/youtube2.svg";
+import Image from "next/image";
+import TikTokIcon  from "../assets/tiktok2.svg";
+import LinkedInIcon  from "../assets/linkedin2.svg";
+import InstagramIcon  from "../assets/instagram2.svg";
+import FacebookIcon  from "../assets/facebook2.svg";
+import YouTubeIcon from "../assets/youtube2.svg";
 
 let Footer = () => {
   return (
@@ -41,12 +41,12 @@ let Footer = () => {
 
           <div className={styles.centerFooter}>
             <div className={styles.footerLogo}>
-              <img
+                 <Image height={50} width={100}
                 src={FooterLogo}
                 alt="FooterLogo"
                 className={styles.footerLogo1}
               />
-              <img
+                 <Image height={50} width={100}
                 src={FooterLogo2}
                 alt="FooterLogo"
                 className={styles.footerLogo2}

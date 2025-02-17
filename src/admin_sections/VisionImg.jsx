@@ -117,12 +117,12 @@ let VisionImg = () => {
   return (
     <div className={styles.singleSectionData}>
       <ToastContainer/>
-      <img className={styles.existingImage} src={sectionDataSingle.image} />
+         <Image height={50} width={100} className={styles.existingImage} src={sectionDataSingle.image} />
       {editMode ? (
         <>
           <input name="image" type="file" onChange={handleInputChange} />
           <div className={styles.editIcons}>
-            <img
+               <Image height={50} width={100}
               src={update}
               className={styles.updateIcon}
               onClick={handleUpdateClick}
@@ -132,7 +132,7 @@ let VisionImg = () => {
         </>
       ) : (
         <div className={styles.editIcons}>
-          <img
+             <Image height={50} width={100}
             src={editIcon}
             className={styles.editIcon}
             onClick={handleEditClick}

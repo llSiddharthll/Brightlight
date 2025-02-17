@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Navbar1.module.css";
 import IconGear from "../assets/gearIcon.svg";
-import RightArrow  from "../assets/rightArrow.svg";
-import PhoneIcon  from "../assets/phoneIcon.svg";
+import RightArrow from "../assets/rightArrow.svg";
+import PhoneIcon from "../assets/phoneIcon.svg";
 import BrightlightBlueLogo from "../assets/brlightlight-icon.webp";
 import LocationIcon from "../assets/location-white.png";
 import EmailIcon from "../assets/mail-white.png";
 import EmailBlue from "../assets/mailBlue.png";
 import LocationBlue from "../assets/locationBlue.png";
-import Search  from "../assets/search.svg";
-import TikTokIcon  from "../assets/tiktok.svg";
-import LinkedInIcon  from "../assets/linkedin.svg";
-import InstagramIcon  from "../assets/instagram.svg";
-import FacebookIcon  from "../assets/facebook.svg";
-import YouTubeIcon  from "../assets/youtube.svg";
+import Search from "../assets/search.svg";
+import TikTokIcon from "../assets/tiktok.svg";
+import LinkedInIcon from "../assets/linkedin.svg";
+import InstagramIcon from "../assets/instagram.svg";
+import FacebookIcon from "../assets/facebook.svg";
+import YouTubeIcon from "../assets/youtube.svg";
 import Facebookblue from "../assets/facebookBlue.png";
 import Youtubeblue from "../assets/youtubeBlue.png";
 import Instagramblue from "../assets/instagramBlue.png";
@@ -23,6 +23,7 @@ import hamBurgerIconWhite from "../assets/hamBurgerIconWhite.svg";
 import hamBurgerIconBlue from "../assets/hamBurgerIconBlue.svg";
 import whiteLogo from "../assets/brightlight-logo-white.png";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar1 = (props) => {
   const [inputValue, setInputValue] = useState("");
@@ -142,7 +143,8 @@ const Navbar1 = (props) => {
               <Link
                 href="/about-us"
                 onMouseEnter={() => setShowAboutDropdown(true)}
-                onMouseLeave={() => setShowAboutDropdown(false)}>
+                onMouseLeave={() => setShowAboutDropdown(false)}
+              >
                 ABOUT
               </Link>
             </div>
@@ -173,16 +175,31 @@ const Navbar1 = (props) => {
         >
           <div className={styles.secondNavbar}>
             <Link href="/" className={`${styles.logo} ${styles.logoDesktop}`}>
-              <img src={BrightlightBlueLogo} alt="Brightlight Blue Logo" />
+              <Image
+                height={50}
+                width={100} // Arbitrary number, Next.js auto-adjusts it
+                src={BrightlightBlueLogo}
+                alt="Brightlight Blue Logo"
+              />
             </Link>
 
             {showBlue ? (
               <Link href="/" className={`${styles.logo} ${styles.logoMobile}`}>
-                <img src={BrightlightBlueLogo} alt="Brightlight Blue Logo" />
+                <Image
+                  height={50}
+                  width={100} // Arbitrary number, Next.js auto-adjusts it
+                  src={BrightlightBlueLogo}
+                  alt="Brightlight Blue Logo"
+                />
               </Link>
             ) : (
               <Link href="/" className={`${styles.logo} ${styles.logoMobile}`}>
-                <img src={whiteLogo} alt="Brightlight Blue Logo" />
+                <Image
+                  height={50}
+                  width={100} // Arbitrary number, Next.js auto-adjusts it
+                  src={whiteLogo}
+                  alt="Brightlight Blue Logo"
+                />
               </Link>
             )}
 
@@ -241,11 +258,17 @@ const Navbar1 = (props) => {
                           onMouseEnter={() => setDoubleNested3(true)}
                           onMouseLeave={() => setDoubleNested3(false)}
                         >
-                          <Link href="/federal-skilled-worker-program">FSWP</Link>
-                          <Link href="/federal-skilled-trades-program">FSTP</Link>
+                          <Link href="/federal-skilled-worker-program">
+                            FSWP
+                          </Link>
+                          <Link href="/federal-skilled-trades-program">
+                            FSTP
+                          </Link>
                           <Link href="/canadian-experience-class">CEC</Link>
                           <Link href="/category-based">Category Based</Link>
-                          <Link href="/transport-occupation">Transport Occupations</Link>
+                          <Link href="/transport-occupation">
+                            Transport Occupations
+                          </Link>
                         </div>
                       </div>
 
@@ -265,7 +288,9 @@ const Navbar1 = (props) => {
                           onMouseEnter={() => setDoubleNested4(true)}
                           onMouseLeave={() => setDoubleNested4(false)}
                         >
-                          <Link href="/agri-food-pilot-program">Agri Food Pilot</Link>
+                          <Link href="/agri-food-pilot-program">
+                            Agri Food Pilot
+                          </Link>
                         </div>
                       </div>
 
@@ -284,7 +309,9 @@ const Navbar1 = (props) => {
                           onMouseEnter={() => setDoubleNested7(true)}
                           onMouseLeave={() => setDoubleNested7(false)}
                         >
-                          <Link href="/bridging-open-work-permit-lp">BCPNP</Link>
+                          <Link href="/bridging-open-work-permit-lp">
+                            BCPNP
+                          </Link>
                         </div>
                       </div>
                       <div>
@@ -454,12 +481,16 @@ const Navbar1 = (props) => {
                           <Link href="/change-college-program">
                             Change of College Program
                           </Link>
-                          <Link href="/visitor-to-student">Visitor to Student</Link>
+                          <Link href="/visitor-to-student">
+                            Visitor to Student
+                          </Link>
                         </div>
                       </div>
 
                       {/* Other menu items */}
-                      <Link href="/study-permit-minors">Study Permit Minors</Link>
+                      <Link href="/study-permit-minors">
+                        Study Permit Minors
+                      </Link>
                     </div>
                   </div>
                   {/*  */}
@@ -480,7 +511,9 @@ const Navbar1 = (props) => {
                       onMouseEnter={() => setShowNestedDropdown4(true)}
                       onMouseLeave={() => setShowNestedDropdown4(false)}
                     >
-                      <Link href="/spousal-open-work-permit">Spousal Permit</Link>
+                      <Link href="/spousal-open-work-permit">
+                        Spousal Permit
+                      </Link>
                       <Link href="/dependent-children">Dependent Children</Link>
                       <Link href="/humanitarian-compassionate">H & C</Link>
                       <Link href="/orphan">Orphan</Link>
@@ -495,7 +528,7 @@ const Navbar1 = (props) => {
 
                   <div className={`${styles.relativeDiv} ${styles.flex}`}>
                     <Link
-                      href="/student-visa"
+                      href="/parents-grandparents"
                       onMouseEnter={() => setShowNestedDropdown5(true)}
                       onMouseLeave={() => setShowNestedDropdown5(false)}
                     >
@@ -562,7 +595,9 @@ const Navbar1 = (props) => {
                     </div>
                   </div>
                   <div className={`${styles.relativeDiv} ${styles.flex}`}>
-                    <Link href="/previous-draw-history">Prevoius Draw History</Link>
+                    <Link href="/previous-draw-history">
+                      Prevoius Draw History
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -627,8 +662,10 @@ const Navbar1 = (props) => {
             {/* Hamburger Icon */}
             <div className={styles.hamburger} onClick={toggleSidebar}>
               {/* &#9776; */}{" "}
-              <img
-                src={showBlue ? hamBurgerIconBlue : hamBurgerIconWhite}
+              <Image
+                height={50}
+                width={100} // Arbitrary number, Next.js auto-adjusts it
+                src={"https://www.svgrepo.com/show/493683/hamburger-2-menu-mobile.svg"}
                 className={styles.hamburgerColoredIcon}
                 alt="wee"
               />
@@ -644,7 +681,7 @@ const Navbar1 = (props) => {
             {/* ///// */}
             <div className={styles.sidebarContent}>
               <div className={styles.closeBtn} onClick={toggleSidebar}>
-                &times;
+                <Image height={30} width={30} src={"https://www.svgrepo.com/show/474223/close-circle.svg"}/>
               </div>
               <Link href="/" className={styles.sidebarLink}>
                 HOME
@@ -657,26 +694,37 @@ const Navbar1 = (props) => {
                 <div className={styles.dropdownContent}>
                   {/* Federal Skilled with Clickable Dropdown */}
                   <div className={styles.subDropdown}>
-                    <Link href="#" onClick={toggleFederalSkilled}>
+                    <Link href="/permanent-residency" onClick={toggleFederalSkilled}>
                       Permanent Residency
                       <span className={styles.arrow}>▼</span>
                     </Link>
                     {isFederalSkilledOpen && (
                       <div className={styles.subDropdownContent}>
                         <div className={styles.subSubDropdown}>
-                          <Link href="/permanent-residency">Permanent Residency</Link>
-                          <Link href="#" onClick={toggleFederalSkilledProgram}>
+                          <Link href="/permanent-residency">
+                            Permanent Residency
+                          </Link>
+                          <Link
+                            href="/express-entry"
+                            onClick={toggleFederalSkilledProgram}
+                          >
                             Express Entry
                             <span className={styles.arrow}>▼</span>
                           </Link>
                           {isFederalSkilledProgramOpen && (
                             <div className={styles.subSubDropdownContent}>
                               <Link href="/express-entry">Express Entry</Link>
-                              <Link href="/federal-skilled-worker-program">FSWP</Link>
-                              <Link href="/federal-skilled-trades-program">FSTP</Link>
+                              <Link href="/federal-skilled-worker-program">
+                                FSWP
+                              </Link>
+                              <Link href="/federal-skilled-trades-program">
+                                FSTP
+                              </Link>
                               <Link href="/canadian-experience-class">CEC</Link>
                               <Link href="/category-based">Category Based</Link>
-                              <Link href="/transport-occupation">Transport Occupations</Link>
+                              <Link href="/transport-occupation">
+                                Transport Occupations
+                              </Link>
                             </div>
                           )}
                         </div>
@@ -725,7 +773,9 @@ const Navbar1 = (props) => {
                               <Link href="/business-visitor-visa">
                                 Business Visitor Visa
                               </Link>
-                              <Link href="/dual-intent-visa">Dual Intent Visa</Link>
+                              <Link href="/dual-intent-visa">
+                                Dual Intent Visa
+                              </Link>
                               <Link href="/reconsideration">
                                 Reconsideration for Refusal
                               </Link>
@@ -736,7 +786,9 @@ const Navbar1 = (props) => {
                         <Link href="/temporary-resident-permit-draft">
                           Temporary Resident Permits
                         </Link>
-                        <Link href="/restoration-status-draft">Restoration</Link>
+                        <Link href="/restoration-status-draft">
+                          Restoration
+                        </Link>
                         <Link href="/extensions-draft">Extend Stay</Link>
                         <Link href="/flagpoling">Flagpoling</Link>
 
@@ -804,7 +856,9 @@ const Navbar1 = (props) => {
                           )}
                         </div>
 
-                        <Link href="/study-permit-minors">Study Permit Minors</Link>
+                        <Link href="/study-permit-minors">
+                          Study Permit Minors
+                        </Link>
                       </div>
                     )}
                   </div>
@@ -817,9 +871,15 @@ const Navbar1 = (props) => {
                     </Link>
                     {isFamilyReunificationOpen && (
                       <div className={styles.subDropdownContent}>
-                        <Link href="/family-reunification-sponsorship">Family Reunification</Link>
-                        <Link href="/spousal-open-work-permit">Spousal Permit</Link>
-                        <Link href="/dependent-children">Dependent Children</Link>
+                        <Link href="/family-reunification-sponsorship">
+                          Family Reunification
+                        </Link>
+                        <Link href="/spousal-open-work-permit">
+                          Spousal Permit
+                        </Link>
+                        <Link href="/dependent-children">
+                          Dependent Children
+                        </Link>
                         <Link href="/humanitarian-compassionate">H & C</Link>
                         <Link href="/orphan">Orphan</Link>
                         <Link href="/adoption">Adoption</Link>
@@ -828,7 +888,9 @@ const Navbar1 = (props) => {
                     )}
                   </div>
                   <div className={`${styles.relativeDiv} ${styles.flex}`}>
-                    <Link href="/previous-draw-history">Previous Draw History</Link>
+                    <Link href="/previous-draw-history">
+                      Previous Draw History
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -858,7 +920,7 @@ const Navbar1 = (props) => {
                 NEWS
               </Link>
               <Link href="/about-us" className={styles.sidebarLink}>
-               ABOUT
+                ABOUT
               </Link>
               <Link href="/contact-us" className={styles.sidebarLink}>
                 CONTACT
@@ -874,13 +936,17 @@ const Navbar1 = (props) => {
             <div className={styles.contactInfo}>
               <div className={styles.location}>
                 {showBlue ? (
-                  <img
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
                     src={LocationBlue}
                     alt="Location Blue"
                     className={styles.icon}
                   />
                 ) : (
-                  <img
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
                     src={LocationIcon}
                     alt="Location"
                     className={styles.icon}
@@ -902,13 +968,21 @@ const Navbar1 = (props) => {
               </div>
               <div className={styles.email}>
                 {showBlue ? (
-                  <img
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
                     src={EmailBlue}
                     alt="Email blue"
                     className={styles.icon}
                   />
                 ) : (
-                  <img src={EmailIcon} alt="Email" className={styles.icon} />
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
+                    src={EmailIcon}
+                    alt="Email"
+                    className={styles.icon}
+                  />
                 )}
 
                 <span
@@ -925,7 +999,12 @@ const Navbar1 = (props) => {
                   target="_blank"
                   href="https://www.tiktok.com/@brightlightimmigration?_t=8lzyE6vJG0E&_r=1"
                 >
-                  <img src={Tiktokblue} />
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
+                    src={Tiktokblue}
+                    alt="tik-tok"
+                  />
                 </Link>
               ) : (
                 <Link
@@ -940,7 +1019,12 @@ const Navbar1 = (props) => {
                   target="_blank"
                   href="https://ca.linkedin.com/in/loveneet-paneswar-5b2377198"
                 >
-                  <img src={Linkedinblue} />
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
+                    src={Linkedinblue}
+                    alt="linkedin"
+                  />
                 </Link>
               ) : (
                 <Link
@@ -955,7 +1039,12 @@ const Navbar1 = (props) => {
                   target="_blank"
                   href="https://www.instagram.com/brightlightimmigration?igsh=b2xmdzh5eDdsc29p"
                 >
-                  <img src={Instagramblue} />
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
+                    src={Instagramblue}
+                    alt="insta"
+                  />
                 </Link>
               ) : (
                 <Link
@@ -970,7 +1059,12 @@ const Navbar1 = (props) => {
                   target="_blank"
                   href="https://www.facebook.com/brightlightimmigration"
                 >
-                  <img src={Facebookblue} />
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
+                    src={Facebookblue}
+                    alt="fb"
+                  />
                 </Link>
               ) : (
                 <Link
@@ -985,7 +1079,12 @@ const Navbar1 = (props) => {
                   target="_blank"
                   href="https://www.youtube.com/channel/UC2NJoKhIOconAE_IFCxX7uA"
                 >
-                  <img src={Youtubeblue} />
+                  <Image
+                    height={50}
+                    width={100} // Arbitrary number, Next.js auto-adjusts it
+                    src={Youtubeblue}
+                    alt="youtube"
+                  />
                 </Link>
               ) : (
                 <Link

@@ -65,9 +65,9 @@
 }
 
 .fourCardImg img {
-  width: 150px;
   transform: rotate(0deg);
   transition: transform 0.2s ease-in-out;
+  height: auto;
 }
 
 .pointerImageSection p {
@@ -378,7 +378,7 @@
 
   .pointerImageSection p{
     font-size: 30px;
-    top: 35px;
+    top: 5px;
   }
 
   .fourCardImg{

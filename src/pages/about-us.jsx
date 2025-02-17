@@ -21,7 +21,7 @@ import Footer1 from "../components/Footer1.jsx";
 import ogImage from "../assets/ogImage.png";
 import Head from "next/head";
 import Odometer from "../components/Odometer.jsx";
-
+import Image from "next/image";
 
 let About = () => {
   let [topSectionData, setTopSectionData] = useState([]);
@@ -348,18 +348,18 @@ let About = () => {
       <div className={styles.aboutBanner} >
       <div className={styles.aboutUsTopContentSection}>
           <div className={styles.aboutLogo}>
-            <img src={AboutLogo} />
+               <Image height={50} width={100} src={AboutLogo} />
           </div>
           <div className={styles.aboutHeading}>
             <h1>{topSectionData?.heading}</h1>
           </div>
           <div className={styles.aboutUsFeaturesSection}>
             <div className={styles.aboutUsFeature}>
-              <img src={Twelve} />
+                 <Image height={50} width={100} src={Twelve} />
               <p>{topSectionData?.feature1Heading}</p>
             </div>
             <div className={styles.aboutUsFeature}>
-              <img src={Comprehensive} />
+                 <Image height={50} width={100} src={Comprehensive} />
 
               <p>{topSectionData?.feature2Heading}</p>
             </div>
@@ -373,7 +373,7 @@ let About = () => {
       <div className={styles.foundationMainSection}>
       <div ref={foundationRef} className={`${styles.foundation} ${styles.hidden}`}>
           <div className={`${styles.foundationInside} ${styles.foundation1}`}>
-            <img src={foundationImage?.image} />
+               <Image height={50} width={100} src={foundationImage?.image} />
             <div className={`${styles.designContent} ${styles.designContent1}`}>
               <h1>{foundationSection?.heading}</h1>
               <h3 className={styles.borderBottomFoundation}>
@@ -396,7 +396,7 @@ let About = () => {
           </div>
           <div className={styles.visionInside}>
             <div className={styles.visionInsideImg}>
-              <img src={visionImage?.image} />
+                 <Image height={50} width={100} src={visionImage?.image} />
             </div>
             <div className={styles.designContent}>
               <h1>{visionSection?.heading}</h1>
@@ -411,7 +411,7 @@ let About = () => {
       <div className={styles.pillarParent}>
       <div ref={pillarsRef} className={`${styles.pillarSection} ${styles.hidden}`}>
           <div className={styles.pillarLogo}>
-            <img src={pillarsImage?.image} />
+               <Image height={50} width={100} src={pillarsImage?.image} />
             <div className={styles.pillarLogoContent}>
               <h2>{pillarsSection?.heading}</h2>
               <p>{pillarsSection?.description1}</p>
@@ -420,19 +420,19 @@ let About = () => {
 
           <div className={styles.pillarFeatureSection}>
             <div className={styles.pillarFeatureSvg}>
-              <img src={INTEGRITY} />
+                 <Image height={50} width={100} src={INTEGRITY} />
               <h4>{pillarsSection?.pillar1Heading}</h4>
               <p>{pillarsSection?.pillar1Description}</p>
             </div>
 
             <div className={styles.pillarFeatureSvg}>
-              <img src={RESPONSIBILITY} />
+                 <Image height={50} width={100} src={RESPONSIBILITY} />
               <h4>{pillarsSection?.pillar2Heading}</h4>
               <p>{pillarsSection?.pillar2Description}</p>
             </div>
 
             <div className={styles.pillarFeatureSvg}>
-              <img src={Reliability} />
+                 <Image height={50} width={100} src={Reliability} />
               <h4>{pillarsSection?.pillar3Heading}</h4>
               <p>{pillarsSection?.pillar3Description}</p>
             </div>
@@ -453,7 +453,7 @@ let About = () => {
             </div>
 
             <div className={styles.meetDirectorImg}>
-              <img src={directorsSection?.d1image} />
+                 <Image height={50} width={100} src={directorsSection?.d1image} />
             </div>
           </div>
         ) : null}
@@ -461,7 +461,7 @@ let About = () => {
         {directorsSection?.d2name && directorsSection?.d2image ? (
           <div className={styles.thedirectors}>
             <div className={styles.meetDirectorImg}>
-              <img src={directorsSection?.d2image} />
+                 <Image height={50} width={100} src={directorsSection?.d2image} />
             </div>
             <div className={styles.meetDirectorimgContent}>
               <h1>{directorsSection?.d2name}</h1>
@@ -480,7 +480,7 @@ let About = () => {
             </div>
 
             <div className={styles.meetDirectorImg}>
-              <img src={directorsSection?.d3image} />
+                 <Image height={50} width={100} src={directorsSection?.d3image} />
             </div>
           </div>
         ) : null}
@@ -488,7 +488,7 @@ let About = () => {
         {directorsSection?.d4name && directorsSection?.d4image ? (
           <div className={styles.thedirectors}>
             <div className={styles.meetDirectorImg}>
-              <img src={directorsSection?.d4image} />
+                 <Image height={50} width={100} src={directorsSection?.d4image} />
             </div>
             <div className={styles.meetDirectorimgContent}>
               <h1>{directorsSection?.d4name}</h1>
@@ -507,7 +507,7 @@ let About = () => {
             </div>
 
             <div className={styles.meetDirectorImg}>
-              <img src={directorsSection?.d5image} />
+                 <Image height={50} width={100} src={directorsSection?.d5image} />
             </div>
           </div>
         ) : null}
@@ -515,8 +515,8 @@ let About = () => {
 
       <div ref={weAreRef} className={styles.weAreParent}>
         <div className={styles.weAreParentImg}>
-          <img src={weAre?.img} className={styles.weAreBig} />
-          <img src={weAreSmall?.image} className={styles.weAreSmall} />
+             <Image height={50} width={100} src={weAre?.img} className={styles.weAreBig} />
+             <Image height={50} width={100} src={weAreSmall?.image} className={styles.weAreSmall} />
         </div>
       </div>
 
@@ -529,19 +529,19 @@ let About = () => {
 
           <div className={styles.ourAchivementCardParent}>
             <div className={styles.ourAchivementCard}>
-              <img src={VisaImg} />
+                 <Image height={50} width={100} src={VisaImg} />
               <h2><Odometer value={achievements?.achievement1Numbers}/><span className={styles.ourAchivementCardPlus}>+</span></h2>
               <p>{achievements?.achievement1Heading}</p>
             </div>
 
             <div className={styles.ourAchivementCard}>
-              <img src={TickBlue} />
+                 <Image height={50} width={100} src={TickBlue} />
               <h2><Odometer value={achievements?.achievement2Numbers}/><span className={styles.ourAchivementCardPlus}>+</span></h2>
               <p>{achievements?.achievement2Heading}</p>
             </div>
 
             <div className={styles.ourAchivementCard}>
-              <img src={SmileBlue} />
+                 <Image height={50} width={100} src={SmileBlue} />
               <h2><Odometer value={achievements?.achievement3Numbers}/><span className={styles.ourAchivementCardPlus}>+</span></h2>
               <p>{achievements?.achievement3Heading}</p>
             </div>
@@ -559,7 +559,7 @@ let About = () => {
           <p>{socialMediaData?.description2}</p>
 
           <div className={styles.socialMoblileImgDiv}>
-            <img src={socialMedia?.image} />
+               <Image height={50} width={100} src={socialMedia?.image} />
           </div>
 
           <div className={styles.socialPresenceIconsParent}>
@@ -567,31 +567,31 @@ let About = () => {
             <div className={styles.socialPresenceIcons}>
               {/* {socialMediaData?.tiktokLink ? ( */}
                 <a href="https://www.tiktok.com/@brightlightimmigration?_t=8lzyE6vJG0E&_r=1">
-                  <img src={TiktokBlue} />
+                     <Image height={50} width={100} src={TiktokBlue} />
                 </a>
               {/* ) : null} */}
 
               {/* {socialMediaData?.linkedinLink ? ( */}
                 <a href="https://ca.linkedin.com/in/loveneet-paneswar-5b2377198">
-                  <img src={LinkedinBlue} />
+                     <Image height={50} width={100} src={LinkedinBlue} />
                 </a>
               {/* ) : null} */}
 
               {socialMediaData?.instagramLink ? (
                 <a href={socialMediaData?.instagramLink}>
-                  <img src={InstaBlue} />
+                     <Image height={50} width={100} src={InstaBlue} />
                 </a>
               ) : null}
 
               {socialMediaData?.facebookLink ? (
                 <a href={socialMediaData?.facebookLink}>
-                  <img src={FacebookBlue} />
+                     <Image height={50} width={100} src={FacebookBlue} />
                 </a>
               ) : null}
 
               {socialMediaData?.youtubeLink ? (
                 <a href={socialMediaData?.youtubeLink}>
-                  <img src={YoutubeBlue} />
+                     <Image height={50} width={100} src={YoutubeBlue} />
                 </a>
               ) : null}
             </div>

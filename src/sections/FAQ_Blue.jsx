@@ -87,10 +87,10 @@ const FAQ_Blue = () => {
             <h1>{faqHeading}</h1>
             <div className={styles.questions}>
               {faqData.map((item, index) => (
-                <>
+                <div key={index}>
                   <div
                     onClick={() => handleQuestionClick(index)}
-                    key={index}
+                    
                     className={`${styles.questionSection} ${
                       activeIndex === index ? styles.active : ""
                     }`}
@@ -107,7 +107,7 @@ const FAQ_Blue = () => {
                       }}
                     />
                   )}
-                </>
+                </div>
               ))}
             </div>
           </div>

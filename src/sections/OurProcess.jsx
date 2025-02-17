@@ -4,7 +4,7 @@ import GoldenPointer from "../assets/golden-pointer.png";
 import Runway from "../assets/runway.png";
 import Plane from "../assets/plane.png";
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 let OurProcess = () => {
   let [planePosition, setPlanePosition] = useState(0);
   let [ourProcessData, setOurProcessData] = useState([]);
@@ -39,7 +39,7 @@ let OurProcess = () => {
                   onMouseEnter={() => setPlanePosition(270)}
                 >
                   <div className={styles.pointerImageSection}>
-                    <img
+                     <Image
                       src={BluePointer}
                       alt="Step 1"
                       loading="lazy"
@@ -71,7 +71,7 @@ let OurProcess = () => {
                   onMouseEnter={() => setPlanePosition(480)}
                 >
                   <div className={styles.pointerImageSection}>
-                    <img
+                     <Image
                       src={GoldenPointer}
                       loading="lazy"
                       alt="Step 2"
@@ -103,7 +103,7 @@ let OurProcess = () => {
                   onMouseEnter={() => setPlanePosition(690)}
                 >
                   <div className={styles.pointerImageSection}>
-                    <img
+                     <Image
                       src={BluePointer}
                       loading="lazy"
                       alt="Step 3"
@@ -135,7 +135,7 @@ let OurProcess = () => {
                   onMouseEnter={() => setPlanePosition(890)}
                 >
                   <div className={styles.pointerImageSection}>
-                    <img
+                     <Image
                       src={GoldenPointer}
                       loading="lazy"
                       alt="Step 4"
@@ -165,8 +165,8 @@ let OurProcess = () => {
               </div>
             </div>
             <div className={styles.runwayParent}>
-              <img src={Runway} alt="Plane" title="Plane" />
-              <img
+               <Image height={50} width={100} src={Runway} alt="Plane" title="Plane" />
+               <Image height={50} width={100}
                 src={Plane}
                 className={styles.plane}
                 alt="Plane"

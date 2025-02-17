@@ -290,16 +290,16 @@ const Navbar3 = (props) => {
         >
           <div className={styles.secondNavbar}>
             <Link href="/" className={`${styles.logo} ${styles.logoDesktop}`}>
-              <Image src={BrightlightBlueLogo} alt="Brightlight Blue Logo" />
+                 <Image height={50} width={100} src={BrightlightBlueLogo} alt="Brightlight Blue Logo" />
             </Link>
 
             {showBlue ? (
               <Link href="/" className={`${styles.logo} ${styles.logoMobile}`}>
-                <Image src={BrightlightBlueLogo} alt="Brightlight Blue Logo" />
+                   <Image height={50} width={100} src={BrightlightBlueLogo} alt="Brightlight Blue Logo" />
               </Link>
             ) : (
               <Link href="/" className={`${styles.logo} ${styles.logoMobile}`}>
-                <Image src={whiteLogo} alt="Brightlight Blue Logo" />
+                   <Image height={50} width={100} src={whiteLogo} alt="Brightlight Blue Logo" />
               </Link>
             )}
 
@@ -980,7 +980,7 @@ const Navbar3 = (props) => {
             {/* Hamburger Icon */}
             <div className={styles.hamburger} onClick={toggleSidebar}>
               {/* &#9776; */}{" "}
-              <img
+                 <Image height={50} width={100}
                 src={showBlue ? hamBurgerIconBlue : hamBurgerIconWhite}
                 className={styles.hamburgerColoredIcon}
                 alt="wee"
@@ -1469,13 +1469,13 @@ const Navbar3 = (props) => {
             <div className={styles.contactInfo}>
               <div className={styles.location}>
                 {showBlue ? (
-                  <img
+                     <Image height={50} width={100}
                     src={LocationBlue}
                     alt="Location Blue"
                     className={styles.icon}
                   />
                 ) : (
-                  <img
+                     <Image height={50} width={100}
                     src={LocationIcon}
                     alt="Location"
                     className={styles.icon}
@@ -1496,13 +1496,13 @@ const Navbar3 = (props) => {
               </div>
               <div className={styles.email}>
                 {showBlue ? (
-                  <img
+                     <Image height={50} width={100}
                     src={EmailBlue}
                     alt="Email blue"
                     className={styles.icon}  target="_blank"
                   />
                 ) : (
-                  <img src={EmailIcon} alt="Email" className={styles.icon} />
+                     <Image height={50} width={100} src={EmailIcon} alt="Email" className={styles.icon} />
                 )}
 
                 <span
@@ -1519,7 +1519,7 @@ const Navbar3 = (props) => {
                   target="_blank"
                   href="https://www.tiktok.com/@brightlightimmigration?_t=8lzyE6vJG0E&_r=1"
                 >
-                  <img src={Tiktokblue} />
+                     <Image height={50} width={100} src={Tiktokblue} />
                 </Link>
               ) : (
                 <Link
@@ -1534,7 +1534,7 @@ const Navbar3 = (props) => {
                   target="_blank"
                   href="https://ca.linkedin.com/in/loveneet-paneswar-5b2377198"
                 >
-                  <img src={Linkedinblue} />
+                     <Image height={50} width={100} src={Linkedinblue} />
                 </Link>
               ) : (
                 <Link
@@ -1549,7 +1549,7 @@ const Navbar3 = (props) => {
                   target="_blank"
                   href="https://www.instagram.com/brightlightimmigration?igsh=b2xmdzh5eDdsc29p"
                 >
-                  <img src={Instagramblue} />
+                     <Image height={50} width={100} src={Instagramblue} />
                 </Link>
               ) : (
                 <Link
@@ -1564,7 +1564,7 @@ const Navbar3 = (props) => {
                   target="_blank"
                   href="https://www.facebook.com/brightlightimmigration"
                 >
-                  <img src={Facebookblue} />
+                     <Image height={50} width={100} src={Facebookblue} />
                 </Link>
               ) : (
                 <Link
@@ -1579,7 +1579,7 @@ const Navbar3 = (props) => {
                   target="_blank"
                   href="https://www.youtube.com/channel/UC2NJoKhIOconAE_IFCxX7uA"
                 >
-                  <img src={Youtubeblue} />
+                     <Image height={50} width={100} src={Youtubeblue} />
                 </Link>
               ) : (
                 <Link

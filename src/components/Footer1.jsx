@@ -5,18 +5,20 @@ import Address from "../assets/address.webp";
 import FooterLogo from "../assets/brightlight-main-logo.webp";
 import FooterLogo2 from "../assets/cicc-seeklogo1.png";
 import UpperFooterImage from "../assets/footer-image.webp";
-
-import TikTokIcon  from "../assets/tiktok.svg";
-import LinkedInIcon  from "../assets/linkedin.svg";
-import InstagramIcon  from "../assets/instagram.svg";
-import FacebookIcon  from "../assets/facebook.svg";
-import YouTubeIcon  from "../assets/youtube.svg";
+import Image from "next/image";
+import TikTokIcon from "../assets/tiktok.svg";
+import LinkedInIcon from "../assets/linkedin.svg";
+import InstagramIcon from "../assets/instagram.svg";
+import FacebookIcon from "../assets/facebook.svg";
+import YouTubeIcon from "../assets/youtube.svg";
 
 const Footer1 = () => {
   return (
     <footer id="footer">
       <div className={styles.upperFooter}>
-        <img
+        <Image height={50} width={100}
+          // Arbitrary number, Next.js auto-adjusts it
+
           src={UpperFooterImage}
           alt="Free Assessment"
           title="Free Assessment"
@@ -44,7 +46,9 @@ const Footer1 = () => {
           <div className={`${styles.leftFooter} ${styles.desktopLeftFooter}`}>
             <div className={styles.leftDiv}>
               <div className={styles.iconHeading}>
-                <img
+                <Image height={50} width={100}
+                  // Arbitrary number, Next.js auto-adjusts it
+
                   src={HoursIcon}
                   alt="Our Working Hours"
                   title="Our Working Hours"
@@ -59,7 +63,9 @@ const Footer1 = () => {
 
             <div className={styles.leftDiv}>
               <div className={styles.iconHeading}>
-                <img
+                <Image height={50} width={100}
+                  // Arbitrary number, Next.js auto-adjusts it
+
                   src={Address}
                   alt="Our Address"
                   title="Our Address"
@@ -100,7 +106,9 @@ const Footer1 = () => {
 
           <div className={styles.centerFooter}>
             <div className={styles.footerLogo}>
-              <img
+              <Image height={50} width={100}
+                // Arbitrary number, Next.js auto-adjusts it
+
                 src={FooterLogo}
                 alt="Brightlight Immigration"
                 title="Brightlight Immigration"
@@ -108,7 +116,9 @@ const Footer1 = () => {
                 className={styles.footerLogo1}
               />
               <div className={styles.footerLogo2Para}>
-                <img
+                <Image height={50} width={100}
+                  // Arbitrary number, Next.js auto-adjusts it
+
                   onClick={() =>
                     window.open(
                       "https://register.college-ic.ca/Public-Register-EN/RCIC_Search.aspx",
@@ -124,7 +134,9 @@ const Footer1 = () => {
                 <p>RCIC License # R522969</p>
               </div>
             </div>
-            {/* <img src={FooterLogo} />  // this  */}
+            {/*    <Image height={50} width={100}
+               // Arbitrary number, Next.js auto-adjusts it
+     src={FooterLogo} />  // this  */}
             <div className={styles.socialMediaFooter}>
               <TikTokIcon
                 onClick={() =>
@@ -231,7 +243,9 @@ const Footer1 = () => {
             <div className={styles.leftFooter}>
               <div className={styles.leftDiv}>
                 <div className={styles.iconHeading}>
-                  <img
+                  <Image height={50} width={100}
+                    // Arbitrary number, Next.js auto-adjusts it
+
                     loading="lazy"
                     src={HoursIcon}
                     alt="Our Working Hours"
@@ -247,11 +261,13 @@ const Footer1 = () => {
 
               <div className={styles.leftDiv}>
                 <div className={styles.iconHeading}>
-                  <img
+                  <Image height={50} width={100}
+                    // Arbitrary number, Next.js auto-adjusts it
+
                     loading="lazy"
                     src={Address}
                     alt="Our Address"
-                     title="Our Address"
+                    title="Our Address"
                     className={styles.socialIcon}
                   />
                   <p>OUR ADDRESS</p>

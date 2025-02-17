@@ -19,7 +19,7 @@ let Navbar = () => {
   return (
     <div className={styles.secondNavbar}>
       <Link href="#" className={styles.logo}>
-        <Image src={"/public/assets/brlightlight-icon.webp"} alt="Brightlight Blue Logo" />
+           <Image height={50} width={100} src={"/public/assets/brlightlight-icon.webp"} alt="Brightlight Blue Logo" />
       </Link>
       <p className={styles.contactNumber}>142536978</p>
       <div className={styles.mainNavbar}>

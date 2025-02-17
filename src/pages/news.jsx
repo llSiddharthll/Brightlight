@@ -181,7 +181,7 @@ let News = () => {
       </Head>
       <Navbar1 showBlue={true} />
       <div className={styles.blogsTopSection}>
-        <img src={brightSource} />
+           <Image height={50} width={100} src={brightSource} />
         <h3>
           Find the newest Canadian immigration news on our website. We give you
           the latest updates, changes in rules, and important stories. Stay
@@ -254,7 +254,7 @@ let News = () => {
               Read More
             </a>
           </div>
-          <div>{firstBlog.image && <img src={firstBlog.image} />}</div>
+          <div>{firstBlog.image &&    <Image height={50} width={100} src={firstBlog.image} />}</div>
         </div>
       ) : null}
       <div className={styles.blogsResultSection}>
@@ -286,7 +286,7 @@ let News = () => {
                       : `/news${item.custom_url}`
                   }
                 >
-                  {item.image && <img src={item.image} />}
+                  {item.image &&    <Image height={50} width={100} src={item.image} />}
 
                   <div>
                     {item?.tag_1 && <h4>{item?.tag_1}</h4>}
@@ -303,9 +303,9 @@ let News = () => {
         )}
         <div className={styles.rightSection}>
           <div className={styles.subscribeSection}>
-            <img className={styles.plane} src={paperPlane} />
+               <Image height={50} width={100} className={styles.plane} src={paperPlane} />
             <h3>Get the latest News Delivered to your mail!</h3>
-            <img src={subscribe} className={styles.subscribe} />
+               <Image height={50} width={100} src={subscribe} className={styles.subscribe} />
           </div>
           <div className={styles.quickLinksSection}>
             <h3>Quick Links</h3>

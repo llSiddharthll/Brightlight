@@ -1,18 +1,24 @@
-import React from "react";
-import { router.replace, useLocation } from "react-router-dom";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 
-const PrivateRoute = ({ element: Element }) => {
-    const { isAuthenticated } = useAuth();
-    const location = useLocation(); 
-  
-    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
-  
-    if (isAuthenticated || isLoggedIn) {
-      return <Element />;
-    } else {
-      return <router.replace to="/auth/panel/dash/bright" state={{ from: location }} replace />;
+const PrivateRoute = ({ Component }) => {
+  const { isAuthenticated } = useAuth();
+  const router = useRouter();
+
+  const isLoggedIn = typeof window !== "undefined" && localStorage.getItem("isLoggedIn") === "true";
+
+  useEffect(() => {
+    if (!isAuthenticated && !isLoggedIn) {
+      router.replace("/auth/panel/dash/bright");
     }
-  };
+  }, [isAuthenticated, isLoggedIn, router]);
+
+  if (!isAuthenticated && !isLoggedIn) {
+    return null; // Prevents flickering before redirect
+  }
+
+  return <Component />;
+};
 
 export default PrivateRoute;

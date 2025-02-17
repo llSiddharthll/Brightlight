@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import styles from "../styles/Cby.module.css";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import Navbar1 from "../components/Navbar1";
 import Footer1 from "../components/Footer1";
 import Testimonials from "../sections/Testimonials";
@@ -61,13 +61,15 @@ const Cby = () => {
 
   const sectionsRef = useRef([]);
 
-  const handleScroll = () => {
+const handleScroll = () => {
     sectionsRef.current.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        section.classList.add(styles.visible);
-      } else {
-        section.classList.remove(styles.visible);
+      if (section) { // ✅ Check if section exists
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          section.classList.add(styles.visible);
+        } else {
+          section.classList.remove(styles.visible);
+        }
       }
     });
   };
@@ -510,7 +512,7 @@ const Cby = () => {
           <h2 className={styles.subheading}>{pData?.NeedAssisHeading}</h2>
           <p>
           {pData?.r1}
-    <Link to="/contact-us">contact us</Link>.
+    <Link href="/contact-us">contact us</Link>.
     
           </p>
         </section>

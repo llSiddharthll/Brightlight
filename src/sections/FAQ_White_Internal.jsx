@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/FAQ_White_Internal.module.css";
-import { ReactComponent as RightArrow } from "../assets/right-arrow-blue.svg";
+import RightArrow from "../assets/right-arrow-blue.svg";
 
 let FAQ_White_Internal = ({ data }) => {
   const [activeIndex, setActiveIndex] = useState(0);

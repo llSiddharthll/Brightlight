@@ -209,7 +209,7 @@ const AllMoreServicesCard = () => {
             <div key={blog._id} className={styles.blogItem}>
               <div className={styles.blogContent}>
                 <h4>{blog.tool_name}</h4>
-                <img
+                   <Image height={50} width={100}
                   src={blog.blue_stroke_img}
                   alt="Service"
                   className={styles.blogImage2}
@@ -217,13 +217,13 @@ const AllMoreServicesCard = () => {
                 <div className={styles.singleBlogOptions}>
                   {editBlogId === blog._id ? (
                     <>
-                      <img
+                         <Image height={50} width={100}
                         src={update}
                         className={styles.updateIcon}
                         onClick={handleUpdateClick}
                         alt="Update"
                       />
-                      <img
+                         <Image height={50} width={100}
                         src={editIcon}
                         className={styles.editIcon}
                         onClick={() => setEditBlogId(null)}
@@ -232,13 +232,13 @@ const AllMoreServicesCard = () => {
                     </>
                   ) : (
                     <>
-                      <img
+                         <Image height={50} width={100}
                         src={editIcon}
                         className={styles.editIcon}
                         onClick={() => handleEditClick(blog)}
                         alt="Edit"
                       />
-                      <img
+                         <Image height={50} width={100}
                         src={deleteIcon}
                         className={styles.deleteIcon}
                         onClick={() => {
@@ -485,7 +485,7 @@ const AllMoreServicesCard = () => {
                     onChange={handleInputChange}
                   />
                   {newBlogData.blue_stroke_img && (
-                    <img
+                       <Image height={50} width={100}
                       className={styles.existingImageSmall2}
                       src={newBlogData.blue_stroke_img}
                       alt="Preview"
@@ -493,7 +493,7 @@ const AllMoreServicesCard = () => {
                   )}
 
                   {newBlogData.white_stroke_img && (
-                    <img
+                       <Image height={50} width={100}
                       className={`${styles.existingImageSmall2} ${styles.blueImage}`}
                       src={newBlogData.white_stroke_img}
                       alt="Preview"

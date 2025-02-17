@@ -505,7 +505,7 @@ let Admin = () => {
     <>
       <div className={styles.grayBg}>
         <div className={styles.topBar}>
-          <img src={blueLogo} className={styles.logo} alt="Logo" />
+             <Image height={50} width={100} src={blueLogo} className={styles.logo} alt="Logo" />
 
           <form className={styles.topBarSearch} onSubmit={handleSearch}>
             <input
@@ -516,7 +516,7 @@ let Admin = () => {
             />
             <span>
               <button className={styles.searchBtn} type="submit">
-                <img src={magnify} />
+                   <Image height={50} width={100} src={magnify} />
               </button>
 
               <button
@@ -529,7 +529,7 @@ let Admin = () => {
           </form>
 
           <div className={styles.userDiv}>
-            <img src={user} onClick={handleDropdownClick} alt="User" />
+               <Image height={50} width={100} src={user} onClick={handleDropdownClick} alt="User" />
             <div
               className={`${styles.userDropdown} ${
                 showDropdown ? styles.active : ""

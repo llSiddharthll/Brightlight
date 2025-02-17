@@ -5,7 +5,7 @@ import deleteIcon from "../assets/delete.png";
 import update from "../assets/update.png";
 import { ToastContainer, toast, Bounce } from "react-toastify";
 
-let Testimonials = () => {
+const Testimonials = () => {
   let notifySuccess = () => {
     toast.success("Success", {
       position: "top-center",
@@ -167,7 +167,7 @@ let Testimonials = () => {
             onChange={handleInputChange}
             disabled={!editMode}
           />
-          <img
+             <Image height={50} width={100}
             className={styles.existingImageSmall}
             src={sectionDataSingle[`review${num}img`]}
           />
@@ -183,14 +183,14 @@ let Testimonials = () => {
       <div className={styles.editIcons}>
         {editMode ? (
           <>
-            <img
+               <Image height={50} width={100}
               src={update}
               className={styles.updateIcon}
               onClick={handleUpdateClick}
             />
           </>
         ) : (
-          <img
+             <Image height={50} width={100}
             src={editIcon}
             className={styles.editIcon}
             onClick={handleEditClick}

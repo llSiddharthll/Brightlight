@@ -459,14 +459,14 @@ const StudentVisaContent = () => {
       
       <div className={styles.editIcons}>
         {editMode ? (
-          <img
+             <Image height={50} width={100}
             src={update}
             className={styles.updateIcon}
             onClick={handleUpdateClick}
             alt="Update"
           />
         ) : (
-          <img
+             <Image height={50} width={100}
             src={editIcon}
             className={styles.editIcon}
             onClick={handleEditClick}

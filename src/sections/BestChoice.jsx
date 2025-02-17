@@ -110,12 +110,14 @@
 //         >
 //           <h2>{bestChoiceHeading?.heading}</h2>
 //         </div>
-//         <img
+//            <Image height={50} width={100}
+//  
 //           src={plane?.image}
 //           className={styles.plane}
 //           style={{ top: `${planeTop}px` }}
 //         />
-//         <img
+//            <Image height={50} width={100}
+//  
 //           src={bestChoiceImage?.image}
 //           ref={trackImageRef}
 //           className={`${styles.trackImage} ${styles.fadeIn}`}
@@ -130,7 +132,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from "../styles/BestChoice.module.css";
 import UpdateBestChoice from "../assets/best-choice-update.png";
-
+import Image from "next/image";
 let BestChoice = () => {
   let [planeTop, setPlaneTop] = useState(150);
   let [isTrackImageVisible, setIsTrackImageVisible] = useState(false);
@@ -239,13 +241,17 @@ let BestChoice = () => {
         <div className={styles.bestChoiceHeading}>
           <h2>{bestChoiceHeading?.heading}</h2>
         </div>
-        <img
+           <Image height={50} width={100}
+         
+          
           src={plane?.image}
           alt="err"
           className={styles.plane}
           style={{ top: `${planeTop}px` }}
         />
-        <img
+           <Image height={50} width={100}
+         
+          
           src={UpdateBestChoice}
           ref={trackImageRef}
           alt="err"

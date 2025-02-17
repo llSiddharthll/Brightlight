@@ -19,6 +19,8 @@ import ogImage from "../assets/ogImage.png";
 import Head from "next/head";
 import Odometer from "../components/Odometer";
 import { debounce } from "lodash";
+import Image from "next/image";
+import Link from "next/link";
 
 let HomePage = () => {
   const swiperRef = useRef(null);
@@ -519,10 +521,13 @@ let HomePage = () => {
 
   const preloadImages = (imageUrls) => {
     imageUrls.forEach((url) => {
-      const img = new Image();
-      img.src = url;
+      if (url) {
+        const img = new window.Image(); // Ensure using the native Image API
+        img.src = url;
+      }
     });
   };
+
 
   // Modify the effect to preload only the visible images
   useEffect(() => {
@@ -562,7 +567,7 @@ let HomePage = () => {
   return (
     <>
       <Head>
-      <link rel="canonical" href="https://brightlightimmigration.ca/" />
+        <link rel="canonical" href="https://brightlightimmigration.ca/" />
         <title>
           {metaData?.metaTitle
             ? metaData?.metaTitle
@@ -669,12 +674,14 @@ let HomePage = () => {
                         }}
                         timeout={0}
                       >
-                        <img
+                        <Image height={50} width={100}
                           src={card.img}
                           className={`${styles.icon} ${styles.fadeIn}`}
                           loading="lazy"
                           alt={card.alt}
                           title={card.alt}
+                        // Arbitrary number, Next.js auto-adjusts it
+
                         />
                       </CSSTransition>
 
@@ -688,41 +695,42 @@ let HomePage = () => {
             )}
           </TransitionGroup>
 
-          <a href="/more-services">
+          <Link href="/more-services">
             <button className={styles.bookButton17} role="button">
               More Services
             </button>
-          </a>
+          </Link>
         </div>
       </div>
 
       <div className={styles.bannerParent2}>
         {/* Check if loveneetBgImage exists before using it */}
         {loveneetBgImage?.image && (
-          <img
+          <Image height={50} width={100}
             src={loveneetBgImage.image}
             alt={loveneetAlt.alt}
             title={loveneetAlt.alt}
             loading="lazy"
             className={styles.backgroundImage}
-            width="100%" // Ensure the width stays 100% of the parent container
-            height="auto" // Maintain the aspect ratio
+          // Arbitrary number, Next.js auto-adjusts it
+
           />
         )}
 
         <div className={styles.bannerParent2ButtonDiv}>
           {/* LinkedIn button */}
           {linkedinLink && (
-            <a href={linkedinLink} target="_blank" rel="noopener noreferrer">
+            <Link href={linkedinLink} target="_blank" rel="noopener noreferrer">
               <button className={styles.linkedInButton}>
-                <img src={LinkedinLogo} alt="LinkedIn" loading="lazy" />
+                <Image height={50} width={100} src={LinkedinLogo} alt="LinkedIn" loading="lazy"    // Arbitrary number, Next.js auto-adjusts it
+                />
               </button>
-            </a>
+            </Link>
           )}
 
           <div className={styles.bannerParent2HaveQuestions}>
             <h5>Have Questions ?</h5>
-            <a
+            <Link
               href={rcicAppointmentUrl}
               target="_blank"
               rel="noopener noreferrer"
@@ -731,7 +739,7 @@ let HomePage = () => {
                 <b>RCIC</b>
                 <p>APPOINTEMENT</p>
               </button>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -750,17 +758,18 @@ let HomePage = () => {
               return (
                 <div
                   key={index}
-                  className={`${styles.memberCard} ${
-                    isVisible ? styles.showMemberCard : ""
-                  }`}
+                  className={`${styles.memberCard} ${isVisible ? styles.showMemberCard : ""
+                    }`}
                 >
                   <p>{member?.heading}</p>
                   <div className={styles.memberCardImg}>
-                    <img
+                    <Image height={50} width={100}
                       src={member?.img}
                       alt={altData[index]}
                       title={altData[index]}
                       loading="lazy"
+                    // Arbitrary number, Next.js auto-adjusts it
+
                     />
                   </div>
                 </div>
@@ -771,9 +780,8 @@ let HomePage = () => {
       </div>
 
       <div
-        className={`${styles.simplifyingParent} ${
-          isFeaturesVisible ? styles.showFeaturesSection : null
-        }`}
+        className={`${styles.simplifyingParent} ${isFeaturesVisible ? styles.showFeaturesSection : null
+          }`}
         ref={featuresSectionRef}
       >
         <div ref={simplifyingRef} className={`${styles.simplifyingMain}`}>
@@ -785,16 +793,17 @@ let HomePage = () => {
                 featuresData[`feature${num}Heading`] && (
                   <div
                     key={num}
-                    className={`${styles.simplifyingDiv} ${
-                      isFeaturesVisible ? styles.showSimplifySection : null
-                    }`}
+                    className={`${styles.simplifyingDiv} ${isFeaturesVisible ? styles.showSimplifySection : null
+                      }`}
                   >
                     <div className={styles.simplifyingImg}>
-                      <img
+                      <Image height={50} width={100}
                         src={featuresData[`feature${num}SVG`]}
                         alt={simplifyData[`alt${num}`]}
                         title={simplifyData[`alt${num}`]}
                         loading="lazy"
+                      // Arbitrary number, Next.js auto-adjusts it
+
                       />
                     </div>
                     <div className={styles.simplifyingContent}>
@@ -819,7 +828,7 @@ let HomePage = () => {
             <p>{servicesData?.description}</p>
 
             <button className={styles.knowButton}>
-              <a href="/more-services">Know More</a>
+              <Link href="/more-services">Know More</Link>
             </button>
           </div>
           <div
@@ -851,12 +860,12 @@ let HomePage = () => {
                   <div className={styles.expertiseDiv}>
                     <h4>{item.title}</h4>
                     <p>{item.desc}</p>
-                    <a
+                    <Link
                       className={styles.expertiseKnowMore}
                       href={link(item.title)}
                     >
                       Know More
-                    </a>
+                    </Link>
                   </div>
                 </SwiperSlide>
               ))}
@@ -871,8 +880,8 @@ let HomePage = () => {
           </div>
 
           <div
-            className={styles.navigationButtons}
-            class="navigation_button_02"
+            className={`${styles.navigationButtons} navigation_button_02`}
+
           >
             <div className="swiper-button-prev"></div>
             <div className="swiper-button-next"></div>
@@ -892,11 +901,13 @@ let HomePage = () => {
               className={`${styles.aspectsCard} ${styles.fadeFromLeft}`}
               ref={(el) => (aspectsCardRefs.current[0] = el)}
             >
-              <img
+              <Image height={50} width={100}
                 src={achiementsData?.achievement1SVG}
                 loading="lazy"
                 alt={achiementsData?.achievement1Alt}
                 title={achiementsData?.achievement1Alt}
+              // Arbitrary number, Next.js auto-adjusts it
+
               />
               <h1>
                 <Odometer value={achiementsData?.achievement1Numbers} />+
@@ -907,11 +918,13 @@ let HomePage = () => {
               className={`${styles.aspectsCard} ${styles.fadeFromBottom}`}
               ref={(el) => (aspectsCardRefs.current[1] = el)}
             >
-              <img
+              <Image height={50} width={100}
                 src={achiementsData?.achievement2SVG}
                 loading="lazy"
                 alt={achiementsData?.achievement2Alt}
                 title={achiementsData?.achievement2Alt}
+              // Arbitrary number, Next.js auto-adjusts it
+
               />
               <h1>
                 <Odometer value={achiementsData?.achievement2Numbers} />+
@@ -922,11 +935,13 @@ let HomePage = () => {
               className={`${styles.aspectsCard} ${styles.fadeFromRight}`}
               ref={(el) => (aspectsCardRefs.current[2] = el)}
             >
-              <img
+              <Image height={50} width={100}
                 src={achiementsData?.achievement3SVG}
                 loading="lazy"
                 alt={achiementsData?.achievement3Alt}
                 title={achiementsData?.achievement3Alt}
+              // Arbitrary number, Next.js auto-adjusts it
+
               />
               <h1>
                 <Odometer value={achiementsData?.achievement3Numbers} />+
@@ -942,7 +957,8 @@ let HomePage = () => {
         <div className={styles.sourceMain}>
           <div className={styles.sourceHeadingParent}>
             <div className={styles.sourceHeadingParentFirstDiv}>
-              <img src={WhiteLogo} loading="lazy" alt="" />
+              <Image height={50} width={100} src={WhiteLogo} loading="lazy" alt="whitelogo"    // Arbitrary number, Next.js auto-adjusts it
+              />
             </div>
             <div>
               {newsSectionData && <h1>{newsSectionData.heading}</h1>}
@@ -1006,7 +1022,7 @@ let HomePage = () => {
                     <div className={styles.sourceContentData}>
                       <h3>{item.news_heading}</h3>
                       <p>{truncateText(item.news_content, 150)}</p>
-                      <a
+                      <Link
                         onClick={() => {
                           localStorage.setItem(
                             "news_heading",
@@ -1016,15 +1032,15 @@ let HomePage = () => {
                         href={
                           !item.custom_url
                             ? `/news/${item.news_heading
-                                .trim()
-                                .toLowerCase()
-                                .replace(/[^\w\s]/g, "")
-                                .replace(/\s+/g, "-")}`
+                              .trim()
+                              .toLowerCase()
+                              .replace(/[^\w\s]/g, "")
+                              .replace(/\s+/g, "-")}`
                             : `/news${item.custom_url}`
                         }
                       >
                         Read more
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </>
